@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Tajawal:400,100,600' rel='stylesheet' type='text/css'>
+    <title>Product-detail</title>
+</head>
+<body onload="getCookie()">
+    <!-- ////redline///// -->
+    <h1 id="a" style="display: none;"></h1>
+    <span id="b" style="display: none;"></span>
+    <!-- /////////////// -->
+    <header>
+<div id="topbar">
+        <div class="search">
+            <input id="searchbar" type="search" placeholder="Search Product..." onkeyup="search()">
+        </div>
+        <div class="rightbutton">
+                <ul class="user-menu">				
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="cart.html">Your Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>					
+                    <li><a href="register.html">Login</a></li>		
+                </ul>
+            </div>
+        </div>
+        <section id="bar" >
+            <div class="navbar">				
+            <a href="./Home.html" ><img src="./images/logo.png" class="logo" alt=""></a>
+            <nav id="menu" >
+                <ul>
+                    <li><a href="./categoryJelwery.html">Jelwery</a></li>
+                    <li><a href="./categoryElectronics.html">Electronics</a></li>			
+                    <li><a href="./products.html">Sport</a>
+                    </li>							
+                    <li><a href="./products.html">Hangbag</a></li>
+                    <li><a href="./products.html">Best Seller</a></li>
+                    <li><a href="./products.html">Top Seller</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</header>
+<section id="slidshow">
+    <img class="pageBanner" src="./images/pageBanner.png" height="auto" width="100%" >
+    <br>
+    <h4 class="titleproduct">
+        <span>Product Detail</span>
+    </h4>
+    <h4 class="title">
+    </h4>
+    <h2 class="ptitle"></h2>
+</section>
+<section id="product-detail">
+            <div class="left">
+          <img src="" class="thumbnail" />
+        </div>
+        <div class="right">
+            <h2 class="ptitle"></h2>
+            <p class="pcategory"></p>
+            <p class="pdescription"></p>
+            <h3 class="pprice"></h3>
+            <p class="pcount"></p>
+            <p class="prate"></p>
+        </div>
+</section>
+<footer>
+    <br>
+    <h4 class="title">
+    </h4>
+    <section id="copyright">
+        <span>Copyright 2022 Amira & Mostafa & Yasmeen  All right reserved.</span>
+    </section>
+</footer>
+<script>
+    function getCookie() {
+        var cookies = document.cookie.split(";");
+
+        // console.log(cookies)
+        var obj = {};
+
+        for (var i = 0; i < cookies.length; i++) {
+            var arr = cookies[i].split("=");
+            console.log(arr);
+
+            console.log(arr[0]);
+            obj[arr[0].trim()] = arr[1];
+        }
+
+        var key = Object.keys(obj)
+
+        document.getElementById("a").innerHTML = obj.idfetch
+        var y = obj.idfetch
+        // console.log(y)
+        document.getElementById("b").innerHTML = y
+
+        jeweleryinside(y)
+    }
+    ///////////////////////
+    function jeweleryinside(t) {
+        var xhr2 = new XMLHttpRequest();
+
+        //2
+
+        xhr2.open('GET', 'https://fakestoreapi.com/products')
+
+        //3
+        xhr2.send()
+
+
+        //4
+        //JSON     parse()        stringify()  
+        xhr2.onreadystatechange = function () {
+
+            if (xhr2.readyState == 4 && xhr2.status == 200) {
+
+                var res = JSON.parse(xhr2.response);
+
+                document.getElementsByClassName("thumbnail")[0].src = res[t].image
+                document.getElementsByTagName("h2")[0].innerHTML = res[t].title
+                document.getElementsByTagName("p")[0].innerHTML = res[t].category
+                document.getElementsByTagName("p")[1].innerHTML = res[t].description
+                document.getElementsByTagName("h3")[0].innerHTML = res[t].price + '$' +''
+                document.getElementsByTagName("p")[2].innerHTML = res[t].rating.count
+                document.getElementsByTagName("p")[3].innerHTML = res[t].rating.rate
+
+            }
+
+        }
+
+    }
+
+    jeweleryinside()
+</script>
+
+<script>
+    function search() {
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName('product-box');
+
+        for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display = "none";
+            }
+            else {
+                x[i].style.display = "list-item";
+            }
+        }
+    }
+</script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>

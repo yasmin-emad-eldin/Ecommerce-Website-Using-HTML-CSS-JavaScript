@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Tajawal:400,100,600' rel='stylesheet' type='text/css'>
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- show the cart-->
+    <div class="cart-modal-overlay">
+        <div class="cart-modal">
+            <i id="close-btn" class="fas fa-times"></i>
+            <h1 class="cart-is-empty">Cart is empty</h1>
+
+            <div class="product-rows">
+            </div>
+            <div class="total">
+                <h1 class="cart-total">TOTAL</h1>
+                <span class="total-price">$0</span>
+                <button class="purchase-btn">PURCHASE</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div id="topbar">
+            <div class="search">
+                <input id="searchbar" type="search" placeholder="Search Product..." onkeyup="search()">
+            </div>
+            <div class="rightbutton">
+                <ul class="user-menu">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="register.html">Login</a></li>
+                    <li>
+                        <div class="cart-btn">
+                            <i id="cart" class="fas fa-shopping-cart"></i>
+                            <span class="cart-quantity">0</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="bar">
+            <div class="navbar">
+                <a href="./Home.html"><img src="./images/logo.png" class="logo" alt=""></a>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="./categoryJelwery.html">Jelwery</a></li>
+                        <li><a href="./categoryElectronics.html">Electronics</a></li>
+                        <li><a href="./products.html">Sport</a>
+                        </li>
+                        <li><a href="./products.html">Hangbag</a></li>
+                        <li><a href="./products.html">Best Seller</a></li>
+                        <li><a href="./products.html">Top Seller</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <section id="slidshow">
+        <img id="sideimg" src="./images/slidshow/1.jpg" alt="penguin" height="330" width="100%" />
+        <br>
+    </section>
+    <section id="product">
+        <h4 class="title">
+            <span>Latest <strong>Products</strong></span>
+        </h4>
+        <ul>
+            <li>
+                <div class="product-box">
+                    <img src="" id="0" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="0" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="1" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="1" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="2" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="2" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="3" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="3" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+        </ul>
+        <h4 class="title">
+        </h4>
+        <ul>
+            <li>
+                <div class="product-box">
+                    <img src="" id="4" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="4" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="5" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="5" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="6" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="6" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="7" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="7" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+        </ul>
+        <h4 class="title">
+        </h4>
+        <ul>
+            <li>
+                <div class="product-box">
+                    <img src="" id="8" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="8" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="9" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="9" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="10" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="10" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="11" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="11" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+        </ul>
+        <h4 class="title">
+        </h4>
+        <ul>
+            <li>
+                <div class="product-box">
+                    <img src="" id="12" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="12" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="13" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="13" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="14" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="14" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="15" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="15" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+        </ul>
+        <h4 class="title">
+        </h4>
+        <ul>
+            <li>
+                <div class="product-box">
+                    <img src="" id="16" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="16" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="17" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="17" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="18" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="18" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+            <li>
+                <div class="product-box">
+                    <img src="" id="19" class="product-image"></img>
+                    <p class="product-title"></p><br />
+                    <h3 class="product-price"></h3>
+                    <button id="19" class="add-to-cart">Add To Cart</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <h4 class="title">
+        </h4>
+        <section id="copyright">
+            <span>Copyright 2022 Amira & Mostafa & Yasmeen All right reserved.</span>
+        </section>
+    </footer>
+    <script>
+        var i = 0
+        var timeOut = function() {
+            setTimeout(next, 3000);
+        }
+
+        var next = function() {
+
+            var slide = document.getElementById("sideimg");
+            var slides = ["./images/slidshow/1.jpg", "./images/slidshow/2.jpg", "./images/slidshow/1.jpg", "./images/slidshow/2.jpg"]
+            slide.src = slides[i];
+            timeOut();
+            i++;
+            if (i >= 4) {
+                i = 0;
+            };
+        };
+
+        next();
+    </script>
+
+    <script>
+        ///////////////////////Product//////////////////////////////// 
+
+        //1
+        var res;
+
+        function product() {
+            var xhr2 = new XMLHttpRequest();
+
+            //2
+
+            xhr2.open('GET', 'https://fakestoreapi.com/products')
+                //3
+            xhr2.send()
+
+
+            //4
+            //JSON     parse()        stringify()  
+            xhr2.onreadystatechange = function() {
+
+                if (xhr2.readyState == 4 && xhr2.status == 200) {
+
+                    res = JSON.parse(xhr2.response);
+                    console.log(Object.keys(res))
+
+                    for (var i = 0; i < res.length; i++) {
+                        document.getElementsByClassName("product-image")[i].src = res[i].image
+                        document.getElementsByClassName("product-title")[i].innerHTML = res[i].title
+                        document.getElementsByClassName("product-price")[i].innerHTML = res[i].price + "$"
+                        document.querySelectorAll("img")[i].addEventListener("click", getClickID, true);
+                    }
+                }
+
+            }
+        }
+        product()
+
+        function getClickID(clickID) {
+            var x = event.target.id
+            saveCookie(x)
+            location.href = "./product_detail.html"
+
+        }
+
+        function saveCookie(e) {
+
+            var d = new Date();
+            d.setMonth(d.getMonth() + 2);
+
+            document.cookie = "idfetch=" + [e] + ";expires=" + d;
+        }
+
+
+        ///////////////////////cart/////////////////////////
+        // function getClickIDButton(clickID) {
+        //     var x = event.target.id
+        //     saveCookie(x)
+        //     getData2(x)
+
+        // }
+
+        // async function getData2(e) {
+        //     try {
+
+        //         var res2 = await fetch("https://fakestoreapi.com/products");
+
+        //         var users2 = await res2.json();
+        //         addProduct(e)
+        //     } catch (e2) {
+        //         console.log(e2);
+        //     }
+        // }
+    </script>
+
+
+    <script>
+        function search() {
+            let input = document.getElementById('searchbar').value
+            input = input.toLowerCase();
+            let x = document.getElementsByClassName('product-box');
+
+            for (i = 0; i < x.length; i++) {
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display = "none";
+                } else {
+                    x[i].style.display = "list-item";
+                }
+            }
+        }
+    </script>
+
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
